@@ -6,7 +6,6 @@ const { createCaesarStream } = require('./caesar-transform');
 
 program
   .requiredOption('-s, --shift <number>', 'a shift', parseInt)
-  .requiredOption('-a , --action <type>', 'an action encode/decode')
   .addOption(new Option('-a , --action <type>', 'an action encode/decode').choices(['decode', 'encode']))
   .option('-i, --input <path>', 'an input file')
   .option('-o, --output <path>', 'an output file')
