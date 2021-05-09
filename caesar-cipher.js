@@ -25,7 +25,7 @@ const getShiftedCode = (code, shift) => {
   }
 }
 
-const transform = (data, initialShift, decode = false) => {
+const caesarCipher = (data, initialShift, decode = false) => {
   const split = data.split('')
   return split.reduce((result, currentChar) => {
     if (/[A-Za-z]/i.test(currentChar)) {
@@ -39,4 +39,4 @@ const transform = (data, initialShift, decode = false) => {
   }, '')
 }
 
-module.exports = { transform }
+module.exports = { caesarCipher }
