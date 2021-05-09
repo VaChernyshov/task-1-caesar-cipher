@@ -26,7 +26,7 @@ const getShiftedCode = (code, shift) => {
 }
 
 const transform = (data, initialShift, decode = false) => {
-  const split = data.split("")
+  const split = data.split('')
   return split.reduce((result, currentChar) => {
     if (/[A-Za-z]/i.test(currentChar)) {
       const charCode = currentChar.charCodeAt(0)
@@ -36,7 +36,7 @@ const transform = (data, initialShift, decode = false) => {
     }
     result += currentChar
     return result
-  }, "")
+  }, '')
 }
 
 module.exports = { transform }
